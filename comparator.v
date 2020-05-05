@@ -28,15 +28,23 @@ module add_4_bits (Cin, A, B, S, Cout);
   add_2_bits _s2(A[3:2], B[3:2], c1, S[3:2], Cout);
 endmodule
 
-module subs_4_bits ( A, B, CIN, S, COUT );
+module subs_4_bits ( A, B, S, COUT );
   input [4:0]A; 
   input [4:0]B; 
-  input CIN;
   output [4:0]S;
   output COUT;
 
-  add_4_bits _s1(CIN, ~B, A, S, COUT);
+  add_4_bits _s1(1'b1, ~B, A, S, COUT);
 endmodule
+
+module eq_4_bits ( A, B, IS_EQ );
+  input [4:0]A; 
+  input [4:0]B; 
+  output IS_EQ;
+
+  assign IS_EQ = A == B;
+endmodule
+
 
 module comparator_4_bits ( PORTA, PORTB, EQUAL, LESS, HIGHER );
   input [4:0] PORTA;
@@ -47,9 +55,9 @@ module comparator_4_bits ( PORTA, PORTB, EQUAL, LESS, HIGHER );
   wire aux;
   wire [4:0] res_out_port;
 
-  subs_4_bits _sub1(PORTA, PORTB, 1'b1, res_out_port, aux);
+  eq_4_bits _isEq(PORTA, PORTB, EQUAL);
+  subs_4_bits _sub1(PORTA, PORTB, res_out_port, aux);
   
-  assign EQUAL = (PORTA == PORTB);
   assign LESS = aux & ~EQUAL;
   assign HIGHER = ~aux;
 endmodule
