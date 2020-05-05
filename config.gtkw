@@ -1,0 +1,26 @@
+[*]
+[*] GTKWave Analyzer v3.3.100 (w)1999-2019 BSI
+[*] Thu Apr 30 18:51:11 2020
+[*]
+[dumpfile] "simulation.vcd"
+[dumpfile_mtime] "Thu Apr 30 18:33:46 2020"
+[dumpfile_size] 3761
+[savefile] "config.gtkw"
+[timestart] 0
+[size] 1920 1017
+[pos] -243 -243
+*-17.000000 479700 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] benchmark_comparator_4_bits.
+[sst_width] 197
+[signals_width] 110
+[sst_expanded] 1
+[sst_vpaned_height] 300
+@29
+benchmark_comparator_4_bits.comp.EQUAL
+benchmark_comparator_4_bits.comp.HIGHER
+benchmark_comparator_4_bits.comp.LESS
+@23
+benchmark_comparator_4_bits.comp.PORTA[4:0]
+benchmark_comparator_4_bits.comp.PORTB[4:0]
+[pattern_trace] 1
+[pattern_trace] 0
