@@ -6,7 +6,7 @@ CC_FLAGS = -Winfloop
 OUT_FILENAME = simulation.out
 WAVE_FILENAME = simulation.vcd
 
-MAIN_VERILOG_FILE = comparator_sim.v
+MAIN_VERILOG_FILE ?= comparator_sim.v
 
 build:
 	@echo Compiling verilog file...
@@ -16,8 +16,11 @@ ${WAVE_FILENAME}:
 	@echo Simulating verilog file...
 	@${VVP} ${OUT_FILENAME}
 
-simulate: ${WAVE_FILENAME}
+simulate: clear ${WAVE_FILENAME}
 	@echo Opening GTKWave with simulation
 	@${GTK_WAVE} ${WAVE_FILENAME} config.gtkw
+
+clear:
+	@del simulation.vcd
 
 run: build simulate

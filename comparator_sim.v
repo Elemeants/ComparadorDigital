@@ -2,12 +2,13 @@
 `include "comparator.v"
 
 module benchmark_comparator_4_bits();
-reg [4:0] PORT_A;
-reg [4:0] PORT_B;
+reg [3:0] PORT_A;
+reg [3:0] PORT_B;
 wire EQUAL;
 wire LESS;
 wire HIGHER;
 
+// is_higher_4_bits eq(PORT_A, PORT_B, LESS);
 comparator_4_bits comp(PORT_A, PORT_B, EQUAL, LESS, HIGHER);
 
 initial
