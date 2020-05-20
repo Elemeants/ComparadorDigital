@@ -1,26 +1,24 @@
 [*]
 [*] GTKWave Analyzer v3.3.100 (w)1999-2019 BSI
-[*] Wed May 13 05:18:36 2020
+[*] Wed May 20 20:02:23 2020
 [*]
-[dumpfile] "C:\Users\Jdany\Desktop\ComparadorDigital\simulation.vcd"
-[dumpfile_mtime] "Wed May 13 05:18:13 2020"
-[dumpfile_size] 8827
-[savefile] "C:\Users\Jdany\Desktop\ComparadorDigital\config.gtkw"
+[dumpfile] "C:\Users\jpolanco\Documents\Verilog\PracticaDigitales\simulation.vcd"
+[dumpfile_mtime] "Wed May 20 20:02:19 2020"
+[dumpfile_size] 13500
+[savefile] "C:\Users\jpolanco\Documents\Verilog\PracticaDigitales\config.gtkw"
 [timestart] 0
-[size] 1370 749
-[pos] -1 -1
-*-18.955206 1250000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
-[treeopen] benchmark_counter_decimal_19.
+[size] 1920 1017
+[pos] 1911 -9
+*-19.894846 1540000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] benchmark_multiplicador.
 [sst_width] 197
-[signals_width] 334
+[signals_width] 358
 [sst_expanded] 1
 [sst_vpaned_height] 300
-@22
-benchmark_counter_decimal_19.PORT_BCD[4:0]
-benchmark_counter_decimal_19.PORT_DISPLAY[6:0]
 @28
-benchmark_counter_decimal_19.SET_ON_DISPLAY_DEC
+benchmark_multiplicador.PORT_A[2:0]
+benchmark_multiplicador.PORT_B[2:0]
 @22
-benchmark_counter_decimal_19._dec.bcd_data[3:0]
+benchmark_multiplicador.PORT_OUT[5:0]
 [pattern_trace] 1
 [pattern_trace] 0
